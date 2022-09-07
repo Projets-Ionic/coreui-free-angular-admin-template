@@ -1,6 +1,7 @@
 import { INavData } from '@coreui/angular';
-
-export const navItems: INavData[] = [
+import { cilChartLine } from '@coreui/icons';
+//cil-group
+export const navItems: INavData[] = [ 
   {
     name: 'Dashboard',
     url: '/dashboard',
@@ -9,6 +10,18 @@ export const navItems: INavData[] = [
       color: 'info',
       text: 'NEW'
     }
+  },
+  {
+    name: 'Suivi clients',
+    url: '/suivi-clients',
+    iconComponent: { name: 'cil-chart-line' },
+    children: [
+      {
+        name: 'Clients',
+        url: '/suivi-clients/clients'
+      }     
+     
+    ]
   },
   {
     title: true,

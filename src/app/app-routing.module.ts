@@ -10,7 +10,7 @@ import { RegisterComponent } from './views/pages/register/register.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   },
   {
@@ -24,6 +24,11 @@ const routes: Routes = [
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
+      },
+      {
+        path: 'suivi-clients',
+        loadChildren: () =>
+          import('./views/suivi-clients/suivi-clients.module').then((m) => m.SuiviClientsModule)
       },
       {
         path: 'theme',
